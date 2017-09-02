@@ -65,19 +65,19 @@ public class LogPrivacyUtil {
 
   /**
    * Tells whether logging of configuration details - including secrets - is allowed or not. This
-   * is driven by a system property defined by LOG_PRINTCONFIG_PROP
+   * is driven by a system property defined by LOG_RAWDATA_PROP
    * @return true only if logging is allowed
    */
   public static boolean allowLogRawData() {
-    return Boolean.getBoolean(LOG_RAWDATA_PROP);
+    return Boolean.getBoolean(System.getProperty(LOG_RAWDATA_PROP));
   }
 
   /**
    * Tells whether logging of potentially sensitive user data is allowed or not. This
-   * is driven by a system property defined by LOG_RAWDATA_PROP
+   * is driven by a system property defined by LOG_PRINTCONFIG_PROP
    * @return true only if logging is allowed
    */
   public static boolean allowLogPrintConfig() {
-    return Boolean.getBoolean(LOG_PRINTCONFIG_PROP);
+    return Boolean.getBoolean(System.getProperty(LOG_PRINTCONFIG_PROP));
   }
 }
