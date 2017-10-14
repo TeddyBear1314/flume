@@ -661,7 +661,7 @@ public class ReliableSpoolingFileEventReader implements ReliableEventReader {
   public static class Builder {
     private File spoolDirectory;
     private String completedSuffix =
-        SpoolDirectorySourceConfigurationConstants.SPOOLED_FILE_SUFFIX;
+        SpoolDirectorySourceConfigurationConstants.DEFAULT_SPOOLED_FILE_SUFFIX;
     private String includePattern = 
         SpoolDirectorySourceConfigurationConstants.DEFAULT_INCLUDE_PAT;
     private String ignorePattern =
